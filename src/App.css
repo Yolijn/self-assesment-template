@@ -1,0 +1,569 @@
+/* Basics */
+.hide-from-view {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 50px;
+  font-size: 18px;
+  line-height: 1.67rem;
+  overflow-x: hidden;
+}
+
+h2,
+h3 {
+  margin: 0;
+}
+
+h1 {
+  margin-top: 80px;
+}
+
+h2 {
+  margin-top: 40px;
+}
+
+h3 {
+  margin-top: 20px;
+}
+
+a {
+  color: inherit;
+}
+
+html {
+  display: flex;
+  flex-direction: column;
+  background-image: url('https://media.istockphoto.com/vectors/geometric-cube-abstract-background-vector-line-seamless-pattern-cube-vector-id672007486');
+  background-size: 100%;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  color: #444;
+}
+
+body {
+  background-color: rgba(255, 255, 255, 0.95);
+  margin: 0;
+}
+
+/* Content */
+h2::after {
+  content: ':';
+}
+
+.content--centered {
+  margin: 0 auto;
+  width: 80vw;
+  max-width: 1000px;
+  padding: 0;
+  position: relative;
+}
+
+/* Lists */
+.list__date {
+  font-weight: bold;
+}
+
+.list__item {
+  display: block;
+}
+
+.list--simple dt,
+.list--simple dd {
+  display: inline-block;
+}
+
+.list--extended dt::after {
+  content: ':';
+}
+
+.list--extended dd {
+  margin: 0 0 20px 0;
+}
+
+.list--align-bullets {
+  padding: 0 20px;
+}
+
+/* Legend */
+
+.legend {
+  position: relative;
+  justify-content: center;
+  display: flex;
+  margin: 20px 0;
+  background-color: rgba(220, 220, 220, 0.7);
+  color: #444;
+  box-shadow: 0 0 2px #222;
+  margin: 20px -20px;
+}
+
+.legend__item--level1 dt {
+  color: rgb(107, 101, 101);
+}
+
+.legend__item--level2 dt {
+  color: rgb(217, 54, 190);
+}
+
+.legend__item--level3 dt {
+  color: rgba(100, 37, 167, 1);
+}
+
+.legend__item--level4 dt {
+  color: rgba(46, 91, 187, 1);
+}
+
+.legend__item--level5 dt {
+  color: rgba(50, 168, 82, 1);
+}
+
+.legend__button {
+  height: 24px;
+  width: 24px;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: transparent;
+  border: none;
+}
+
+.legend__button:focus {
+  outline: none;
+  border-radius: 24px 24px;
+  box-shadow: 0 0 10px #fff;
+}
+
+.legend__button i {
+  color: #444;
+}
+
+.legend__content {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  flex-grow: 1;
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0s;
+  height: auto;
+  width: 80vw;
+  max-width: 1000px;
+}
+
+.legend--inactive {
+  border: none;
+  box-shadow: none;
+  background-color: transparent;
+  margin: 0;
+  transition: all 0.2s ease-out;
+}
+
+.legend--inactive h2 {
+  text-indent: -10000px;
+}
+
+.legend--inactive .legend__content {
+  visibility: hidden;
+  font-size: 0.1em;
+  opacity: 0;
+  height: 0;
+  border: none;
+  transform: translateX(50%);
+  transition: font-size 0.4s ease-in-out, border 0s linear, height 0.2s linear,
+    visibility 0s linear 0.33s, opacity 0.2s linear;
+}
+
+.legend__icon,
+.legend--inactive .legend__icon--active {
+  display: none;
+}
+
+.legend__icon--active,
+.legend--inactive .legend__icon--inactive {
+  display: block;
+}
+
+.legend--inactive .legend__button {
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+}
+
+.legend--inactive .legend__button i {
+  color: #666;
+  font-size: 40px;
+}
+
+.legend__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.legend__header h3 {
+  margin-top: 0;
+}
+
+.legend__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.legend__item {
+  line-height: 1.5em;
+  border-top: 1px dashed #666;
+  padding: 1em 0;
+  text-align: justify;
+}
+
+.legend__item:first-child {
+  border: none;
+  padding-top: 0;
+}
+
+.legend__item:last-child {
+  padding-bottom: 0;
+}
+
+.legend__item dt {
+  font-weight: bold;
+  font-size: 1.1em;
+  margin-bottom: 5px;
+}
+
+.legend__item dd {
+  margin: 0;
+}
+
+.skills-summary {
+  text-align: justify;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 0;
+}
+
+.skills-summary__skill {
+  margin: 3px 2px;
+  line-height: 1.5em;
+  text-align: justify;
+}
+
+.skills-summary__skill::after {
+  content: ';';
+  font-weight: 100;
+}
+
+.skills-summary__skill:last-child::after {
+  border: none;
+}
+
+/* Skills */
+
+.skills__subject {
+  padding-bottom: 42px;
+}
+
+.skills__subject h3 {
+  font-size: 1.2em;
+  padding: 10px 0;
+  margin: 0 0 10px 0;
+}
+
+.skill {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px dashed #ddd;
+  margin-left: -20px;
+  margin-right: -20px;
+  padding: 0 20px;
+}
+
+.skill summary {
+  margin-left: -20px;
+}
+
+.skill:last-child {
+  border-bottom: none;
+}
+
+.skill:nth-child(even) {
+  background-color: rgba(200, 200, 200, 0.2);
+}
+
+.skill p,
+.skill details {
+  margin: 1em 2em 1em 0;
+  flex-grow: 1;
+  max-width: 75%;
+}
+
+.skill details ul {
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.skill details li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1em;
+  align-items: center;
+  border-top: 1px dashed #aaa;
+  padding-top: 10px;
+}
+
+.skill details li:last-child {
+  margin-bottom: 0;
+}
+
+.skill details span {
+  max-width: 80%;
+}
+
+.skill progress {
+  max-width: 20%;
+}
+
+progress[value] {
+  /* Reset the default appearance */
+  -webkit-appearance: none;
+  -moz-appearence: none;
+  appearance: none;
+
+  width: 250px;
+  height: 20px;
+  border: 1px solid black;
+  background-color: rgba(200, 200, 200, 0.7);
+}
+
+details progress[value] {
+  width: 100px;
+  height: 1em;
+}
+
+::-webkit-progress-bar {
+  background-color: rgba(200, 200, 200, 0.7);
+  box-shadow: 1px 1px 4px #666 inset;
+}
+
+::-webkit-progress-value {
+  box-shadow: 0 0 2px rgb(204, 204, 204) inset;
+  opacity: 0.9;
+  box-shadow: 0 0 4px #444 inset;
+}
+
+::-moz-progress-bar {
+  background-color: rgba(200, 200, 200, 0.7);
+  box-shadow: 1px 1px 4px #666 inset;
+}
+
+progress[value='0.5']::-webkit-progress-value,
+progress[value='1']::-webkit-progress-value {
+  background-color: rgba(107, 101, 101, 0.7);
+}
+
+progress[value='0.5']::-moz-progress-bar,
+progress[value='1']::-moz-progress-bar {
+  background-color: rgba(107, 101, 101, 0.7);
+}
+
+progress[value='1.5']::-webkit-progress-value,
+progress[value='2']::-webkit-progress-value {
+  background-color: rgba(250, 170, 237, 0.7);
+}
+
+progress[value='1.5']::-moz-progress-bar,
+progress[value='2']::-moz-progress-bar {
+  background-color: rgba(250, 170, 237, 0.7);
+}
+
+progress[value='2.5']::-webkit-progress-value,
+progress[value='3']::-webkit-progress-value {
+  background-color: rgba(100, 37, 167, 0.6);
+}
+
+progress[value='2.5']::-moz-progress-bar,
+progress[value='3']::-moz-progress-bar {
+  background-color: rgba(100, 37, 167, 0.6);
+}
+
+progress[value='3.5']::-webkit-progress-value,
+progress[value='4']::-webkit-progress-value {
+  background-color: rgba(46, 91, 187, 0.7);
+}
+
+progress[value='3.5']::-moz-progress-bar,
+progress[value='4']::-moz-progress-bar {
+  background-color: rgba(46, 91, 187, 0.7);
+}
+
+progress[value='4.5']::-webkit-progress-value,
+progress[value='5']::-webkit-progress-value {
+  background-color: rgba(50, 168, 82, 0.8);
+}
+
+progress[value='4.5']::-moz-progress-bar,
+progress[value='5']::-moz-progress-bar {
+  background-color: rgba(50, 168, 82, 0.8);
+}
+
+@media print {
+  html {
+    background-image: none;
+  }
+
+  .legend__icon,
+  .legend--inactive .legend__icon--active {
+    display: none;
+  }
+
+  .legend__icon--active,
+  .legend--inactive .legend__icon--inactive {
+    display: none;
+  }
+
+  details summary {
+    list-style-type: none;
+    padding-left: 20px;
+  }
+
+  details summary::-webkit-details-marker {
+    display: none;
+  }
+
+  body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .content--centered {
+    margin: 0 auto;
+    width: 90%;
+    padding: 0;
+  }
+
+  h1 {
+    margin: 20px 0 40px 0;
+  }
+
+  h2 {
+    font-size: 1.2em;
+    margin-top: 10px;
+  }
+
+  .print--new-page {
+    page-break-before: always;
+    break-before: always;
+    -webkit-break-before: always;
+  }
+
+  .print--hidden {
+    display: none;
+  }
+
+  .legend,
+  .legend--inactive {
+    position: relative;
+    justify-content: center;
+    display: flex;
+    background-color: transparent;
+    color: #444;
+    box-shadow: none;
+    margin: 20px -20px;
+    width: auto;
+    border: none;
+    transition: none;
+    border: 1px solid lightgray;
+  }
+
+  .legend--inactive h2 {
+    text-indent: none;
+  }
+
+  .legend--inactive .legend__content {
+    visibility: visible;
+    font-size: 1em;
+    opacity: 1;
+    height: auto;
+    border: none;
+    transform: none;
+    transition: none;
+  }
+
+  .legend__header {
+    display: none;
+  }
+
+  .legend__item {
+    border-top: none;
+  }
+
+  .skill p,
+  .skill details {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  .skill progress {
+    height: 10px;
+  }
+
+  .skills-summary {
+    text-align: justify;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 0;
+  }
+
+  .skills-summary__skill {
+    margin: 0 2px;
+    line-height: 1em;
+    text-align: justify;
+    padding: 0;
+  }
+
+  .skills-summary__skill::after {
+    content: ',';
+    border-right: none;
+    font-weight: inherit;
+    color: inherit;
+    margin-left: 0;
+  }
+
+  .skills-summary__skill:last-child::after {
+    border: none;
+  }
+
+  .content--small-print {
+    font-size: 0.6em;
+  }
+
+  .content--small-print h3 {
+    font-size: 1.2em;
+    margin-bottom: 0;
+  }
+
+  .skills__subject {
+    padding-bottom: 20px;
+  }
+
+  progress,
+  ::-webkit-progress-bar {
+    background-color: white;
+    box-shadow: none;
+  }
+
+  ::-webkit-progress-value {
+    box-shadow: none;
+  }
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "value": "Level 1",
+    "description": "You have either no experience, or you have worked in a project that used this technique but did not use it much yourself"
+  },
+  {
+    "value": "Level 2",
+    "description": "You can explain for what purposes you would use this technique. When given specific tasks, you know how to go about it and you can get work done efficiently. You know how to find resources on the internet, but for the sake of team velocity it would be best if you can receive some mentoring or do some pair programming to get things done more quickly and eventually become fully self-reliant"
+  },
+  {
+    "value": "Level 3",
+    "description": "When the design for a feature is presented to the team you can plan and coordinate the tasks needed in this field. You can quickly assess what needs to be done in what order, and explain to less experienced and non-technical team members how much effort would be involved in realising the proposed design"
+  },
+  {
+    "value": "Level 4",
+    "description": "You have extensively used this technique, to the point where you can quickly have a look at code of team members to help them debug a situation. When it comes to this technique, would be the go-to person in the team"
+  },
+  {
+    "value": "Level 5",
+    "description": "When starting a project from scratch, you can be the person responsible for getting started The Right Way, and you can help team members via mentoring and code reviews to acquire this skill and maintain a high quality"
+  }
+]
