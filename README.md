@@ -18,7 +18,13 @@ Use this template to create your self-assessment page in a new public/private re
 
 In this repo you're free to also remove skills, rename topics, change the styling or layout. If you feel these changes might benefit the community as a whole, please also create a PR with the relevant changes for the template repo.
 
-The template also includes `gh-pages` to quickly deploy your assessment publicly as a github page. To make this happen, run `npm run deploy` after enabling github pages in your newly created repo.
+The template also includes `gh-pages` to quickly deploy your assessment publicly as a github page. To make this happen:
+
+- Enable github pages in your repo
+- Change the `homepage` in `package.json` to the location of your github page
+- Run `npm run deploy` locally
+- Change the setting of your github pages to use the gh-page branch
+- See the page with all the latest features on your github url
 
 ## Asking other people for their assessment of your skills
 
