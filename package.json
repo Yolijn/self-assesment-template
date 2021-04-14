@@ -1,5 +1,6 @@
 {
   "name": "self-assesment-template",
+	"homepage": "https://yolijn.github.io/self-assesment-template/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
