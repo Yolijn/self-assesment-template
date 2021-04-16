@@ -49,9 +49,16 @@ body {
   margin: 0;
 }
 
-/* Content */
-h2::after {
-  content: ':';
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.button--icon {
+  height: 24px;
+  width: 24px;
+  padding: 0;
 }
 
 .content--centered {
@@ -154,51 +161,6 @@ h2::after {
   height: auto;
   width: 80vw;
   max-width: 1000px;
-}
-
-.legend--inactive {
-  border: none;
-  box-shadow: none;
-  background-color: transparent;
-  margin: 0;
-  transition: all 0.2s ease-out;
-}
-
-.legend--inactive h2 {
-  text-indent: -10000px;
-}
-
-.legend--inactive .legend__content {
-  visibility: hidden;
-  font-size: 0.1em;
-  opacity: 0;
-  height: 0;
-  border: none;
-  transform: translateX(50%);
-  transition: font-size 0.4s ease-in-out, border 0s linear, height 0.2s linear,
-    visibility 0s linear 0.33s, opacity 0.2s linear;
-}
-
-.legend__icon,
-.legend--inactive .legend__icon--active {
-  display: none;
-}
-
-.legend__icon--active,
-.legend--inactive .legend__icon--inactive {
-  display: block;
-}
-
-.legend--inactive .legend__button {
-  top: 0;
-  right: 0;
-  width: 40px;
-  height: 40px;
-}
-
-.legend--inactive .legend__button i {
-  color: #666;
-  font-size: 40px;
 }
 
 .legend__header {
